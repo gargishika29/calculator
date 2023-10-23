@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" id="theme">
+    <!-- <link rel="stylesheet" href="darkmode.css" id="theme"> -->
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <div class="row-1">
+            <input type="text" name="" id="txtC">
+            <input type="button" value="." onclick="doCalc('.')">
+        </div>
+        <div class="row-2">
+            <input type="button" class="active" value="C" onclick="doClear();">
+            <input type="button" value="%" onclick="doCalc('%');">
+            <input type="button" value="(" onclick="doCalc('(');">
+            <input type="button" value=")" onclick="doCalc(')');">
+            <input type="button" class="active" src="imgs/backspace.png" value="-->" onclick="txtC.value = txtC.value.slice(0,-1)">
+        </div>
+        <div class="row-3">
+            <input type="button" value="1" onclick="doCalc('1')">
+            <input type="button" value="2" onclick="doCalc('2')">
+            <input type="button" value="3" onclick="doCalc('3')">
+            <input type="button" value="4" onclick="doCalc('4')">
+            <input type="button" value="/" onclick="doCalc('/')">
+        </div>
+        <div class="row-4">
+            <input type="button" value="5" onclick="doCalc('5')">
+            <input type="button" value="6" onclick="doCalc('6')">
+            <input type="button" value="7" onclick="doCalc('7')">
+            <input type="button" value="8" onclick="doCalc('8')">
+            <input type="button" value="*" onclick="doCalc('*')">
+        </div>
+        <div class="row-5">
+            <input type="button" value="9" onclick="doCalc('9')">
+            <input type="button" value="0" onclick="doCalc('0')">
+            <input type="button" class="active" value="=" onclick="txtC.value =eval(txtC.value)">
+            <input type="button" value="+" onclick="doCalc('+')">
+            <input type="button" value="-" onclick="doCalc('-')">
+        </div>
+        <div class="theme">
+            <!-- <input type="button" id="dark" value="Dark-Mode" onclick="switchTheme();"> -->
+            <button class="dark" onclick="switchTheme('calculator.css')"><img src="imgs/sun.png" alt=""></button>
+            <button class="dark" onclick="switchTheme('darkmode.css')"><img src="imgs/moon.png" alt=""></button>
+        </div>
+    </div>
+</body>
+</html>
